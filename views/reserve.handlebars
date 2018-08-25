@@ -34,8 +34,12 @@
       </div>
     </div>
     <div class="card mb-3">
-      {{#if error}}
+      {{!-- Form Error --}} {{#if error}}
       <div class="alert">{{ error }}</div>
+      {{/if}} {{!-- Table Reserved --}} {{#if success}}
+      <div class="success">{{ success }}</div>
+      {{/if}} {{!-- Waiting List --}} {{#if wait}}
+      <div class="success">{{ wait }}</div>
       {{/if}}
       <div class="card-body">
         <h3 class="card-title">Table Reservation</h3>

@@ -21,9 +21,9 @@ router.post('/tables', function(req, res) {
       var newCustomer = req.body;
       newCustomer.id = Math.floor(Math.random() * 89999999999) + 10000000000;
       tables.push(newCustomer);
-      res.redirect('/tables');
+      req.flash('success', 'Your table is reserved!');
+      res.redirect('/reserve');
     } else {
-      console.log('error: ', err.message);
       req.flash('error', err.message);
       res.redirect('/reserve');
     }
@@ -36,9 +36,11 @@ router.post('/wait', function(req, res) {
       var newCustomer = req.body;
       newCustomer.id = Math.floor(Math.random() * 89999999999) + 10000000000;
       wait.push(newCustomer);
-      res.redirect('/tables');
+      req.flash('wait', 'You have been placed on a waiting list.');
+      res.redirect('/reserve');
     } else {
-      console.log('error: ', err.message);
+      req.flash('error', err.message);
+      res.redirect('/reserve');
     }
   });
 });

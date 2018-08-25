@@ -3,7 +3,8 @@ h1,
   border-bottom: 1px solid #ccc;
 }
 
-div.alert {
+div.alert,
+div.success {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -15,4 +16,10 @@ div.alert {
   margin-top: 20px;
   padding: 10px 30px;
   text-align: center;
+}
+
+div.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }

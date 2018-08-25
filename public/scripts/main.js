@@ -32,7 +32,7 @@ $.get('/api/wait', function(data) {
             <div class="card mb-3">
               <div class="card-body">
                 <h3 class="table pb-3">Table #${tableNum}</h3>
-                <h4 class="id">ID: ${table.id}: </h4>
+                <h4 class="id">ID: ${table.id} </h4>
                 <h4 class="name">Name: ${table.name}</h4>
                 <h4 class="email">Email: ${table.email}</h4>
                 <h4 class="phone">Phone: ${table.phone}</h4>
